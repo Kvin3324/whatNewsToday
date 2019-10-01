@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 function ArticleCard(props) {
     return (
       // <div className="col-xl-4 col-sm-6">
-        <div className="article--card">
+        // <div className="article--card col-4">
           <div className="card">
             <div className="card-body">
               <div className="card--img">
@@ -30,7 +30,7 @@ function ArticleCard(props) {
               </div>
             </div>
           </div>
-        </div>
+        // </div>
       // </div>
     )
 }
