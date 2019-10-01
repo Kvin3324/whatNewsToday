@@ -12,17 +12,26 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: Olondon;
+  src: url("./old_london/Olondon_.otf");
+}
+
+.fa-spinner {
+  font-size: 6em;
+  position: absolute;
+  left: 48%;
+  top: 40%;
+}
 
 .header {
   color: black;
+  font-family: Olondon;
+  margin-bottom: 3%;
 }
 
-.articles--headlines {
-  background-color: grey;
-}
-
-.card--articles--headlines {
-  margin-left: 10%;
+.header h1 {
+  font-size: 3em;
 }
 
 .label--select--country {
@@ -34,6 +43,28 @@ code {
 .select--country {
   width: 20%;
 }
+
+.buttons--render {
+  margin-left: 31%;
+}
+
+.article--cards--list > .card {
+  margin-top: 2%;
+}
+.article--cards--list > .card > .card-body > .card--img > .card-img-list {
+  height: 470px;
+}
+
+.articles--headlines {
+  background-color: grey;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.card--articles--headlines {
+  margin-left: 10%;
+}
+
 
 .card {
   width: 105%;
