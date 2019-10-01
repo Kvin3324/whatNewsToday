@@ -1,15 +1,23 @@
 import React from 'react';
 import Header from "./components/Header";
-import Articles from "./components/Articles";
+import MainArticles from "./components/MainArticles";
+import HeadlineArticles from "./components/HeadlineArticles";
 
 // import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App col-12">
       <Header />
-      <Articles />
+      <div className="row">
+        <div className="col-9 articles--everything">
+          <MainArticles />
+        </div>
+        <div className="col-3 articles--headlines">
+          <HeadlineArticles />
+        </div>
+      </div>
     </div>
   );
 }
