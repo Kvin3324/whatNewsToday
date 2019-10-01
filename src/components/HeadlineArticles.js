@@ -16,18 +16,16 @@ function Articles() {
     .then(response => response.json())
     .then(data => setData({articles: data.articles}))
   }, []);
-  // console.log(data.articles);
 
   return (
     <React.Fragment>
       { (function() {
         if(data.articles === null) {
-          // return <i className="fa fa-spinner"></i>
-          return "loading"
+          return <i className="fa fa-spinner"></i>
         } else{
           return data.articles.map((article, index) => {
             return (
-              <div className="col-10 card--articles--headlines">
+              <div className="col-10 card--articles--headlines" key={index}>
                 <ArticleCard urlToImage={article.urlToImage} publishedAt={article.publishedAt} author={article.author} title={article.title} description={article.description} source={article.source.name} url={article.url} key={index} />
               </div>
             )
