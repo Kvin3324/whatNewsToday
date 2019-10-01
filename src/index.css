@@ -17,8 +17,26 @@ code {
   color: black;
 }
 
+.articles--headlines {
+  background-color: grey;
+}
+
+.card--articles--headlines {
+  margin-left: 10%;
+}
+
+.label--select--country {
+  background-color:grey;
+  color: white;
+  padding: 6px 5px;
+}
+
+.select--country {
+  width: 20%;
+}
+
 .card {
-  width: 100%;
+  width: 105%;
   margin-top: 20%;
   /* margin-left: 10%; */
   border-radius: 10px;
@@ -27,5 +45,5 @@ code {
 
 .card-img-list {
   height: 250px;
-  width: 90%;
+  width: 100%;
 }
