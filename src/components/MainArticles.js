@@ -68,8 +68,8 @@ function Articles() {
             Object.keys(state.filters).map(key => {
               return (
                 <>
-                  <label htmlFor="select--country" className="label--select--country mr-2">{key}</label>
-                  <select className="custom-select select--country" id={key} onChange={e => handleChange(e)}>
+                  <label htmlFor={key} className="label--select ml-2 mt-1">{key}</label>
+                  <select className="custom-select select" id={key} onChange={e => handleChange(e)}>
                     {
                       state[key].map(item => {
                         return typeof item === "object" ?
