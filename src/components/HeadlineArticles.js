@@ -10,9 +10,7 @@ function Articles() {
 
   useEffect(() => {
     // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
-    // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
     fetch(`${url}everything?domains=lemonde.fr&apiKey=${apiKey}`)
-
     .then(response => response.json())
     .then(data => setData({articles: data.articles}))
   }, []);
@@ -26,7 +24,7 @@ function Articles() {
           return data.articles.map((article, index) => {
             return (
               <div className="col-10 card--articles--headlines" key={index}>
-                <ArticleCard urlToImage={article.urlToImage} publishedAt={article.publishedAt} author={article.author} title={article.title} description={article.description} source={article.source.name} url={article.url} key={index} />
+                <ArticleCard urlToImage={article.urlToImage} publishedAt={article.publishedAt} author={article.author} title={article.title} source={article.source.name} url={article.url} key={index} />
               </div>
             )
           })
