@@ -44,5 +44,14 @@
       "value": "de",
       "content": "Germany"
     }
-  ]
+  ],
+  "category": [
+    "business",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology"
+]
 }
