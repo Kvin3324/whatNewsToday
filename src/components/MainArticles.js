@@ -7,9 +7,10 @@ function Articles() {
     articles: null,
     filters: {
       country: "fr",
-      // category: "business"
+      category: "business"
     },
     country: [...countryData.country],
+    category: [...countryData.category],
     isInGrid: true
   });
   const url = 'https://newsapi.org/v2/'
@@ -18,26 +19,28 @@ function Articles() {
   const handleChange = element => {
     const newState = {...state};
 
-    Object.keys(state.filters).map(lg => {
-      if (element.target.value === lg) {
-        newState.filters[lg] = element.target.value;
-      }
-    });
+    // Object.keys(state.filters).map(lg => {
+    //   console.log(element.target.id);
+    //   if (element.target.value !== lg) {
+    //     newState.filters[lg] = element.target.value;
+    //   }
+    // });
+    newState.filters[element.target.id] = element.target.value
+    setState(newState);
 
-    fetch(`${url}top-headlines?country=${state.filters.country}&apikey=${apiKey}`)
-    .then(data => data.json())
-    .then(dataParsed => {
-      newState.articles = [...dataParsed.articles];
-      setState(newState);
-    });
+    // fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&apiKey=${apiKey}`)
+    // .then(data => data.json())
+    // .then(dataParsed => {
+    //   newState.articles = [...dataParsed.articles];
+    //   setState(newState);
+    // });
   };
 
-  const handleClick = element => {
+  const handleClick = el => {
     const newState = {...state};
-    if (element.target.classList[3] === "btn--list") {
-      newState.isInGrid = false
-      console.log(newState.isInGrid);
 
+    if (el.target.classList[3] === "btn--list") {
+      newState.isInGrid = false;
       setState(newState);
     } else {
       newState.isInGrid = true;
@@ -48,28 +51,37 @@ function Articles() {
   useEffect(() => {
     // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
     // fetch(`${url}everything?domains=lemonde.fr&apiKey=${apiKey}`)
-    fetch(`${url}top-headlines?country=${state.filters.country}&apiKey=${apiKey}`)
+    fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&apiKey=${apiKey}`)
     .then(response => response.json())
     .then(dataParsed => {
         const newState = {...state};
         newState.articles = [...dataParsed.articles];
         setState(newState);
     })
-  }, []);
-  console.log(state.articles);
+  }, [state.filters.country, state.filters.category]);
 
   return (
     <React.Fragment>
       <div className="row">
         <div className="countries col-6 mt-5">
-          <label htmlFor="select--country" className="label--select--country mr-2">Country</label>
-          <select className="custom-select select--country" onChange={e => handleChange(e)}>
-            {
-              state.country.map(item => {
-                return <option value={item.value} key={item.value}>{item.content}</option>
+          {
+            Object.keys(state.filters).map(key => {
+              return (
+                <>
+                  <label htmlFor="select--country" className="label--select--country mr-2">{key}</label>
+                  <select className="custom-select select--country" id={key} onChange={e => handleChange(e)}>
+                    {
+                      state[key].map(item => {
+                        return typeof item === "object" ?
+                          <option value={item.value} key={item.value}>{item.content}</option> :
+                          <option value={item} key={item}>{item}</option>
+                      })
+                    }
+                  </select>
+                </>
+              )
               })
             }
-          </select>
         </div>
         <div className="buttons--render mt-5">
           <button type="button" className="btn btn-primary btn-sm btn--grid" onClick={e => handleClick(e)}><i className="fas fa-grip-horizontal mr-1"></i>Grid</button>
