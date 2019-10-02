@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.container--app {
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+
 @font-face {
   font-family: Olondon;
   src: url("./old_london/Olondon_.otf");
@@ -31,50 +39,92 @@ code {
 }
 
 .header h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+  margin-top: 20px;
 }
 
-.label--select--country {
-  background-color:grey;
+.label--select {
+  background-color:#A19D9D;
   color: white;
   padding: 6px 5px;
+  border-radius: 7px;
+  margin-right: 10px;
 }
 
-.select--country {
-  width: 20%;
+.select {
+  width: 25%;
 }
 
 .buttons--render {
-  margin-left: 31%;
+  margin-left: 37%;
+}
+
+.btn--grid {
+  background-color: #8E8E8E;
+  border: none;
+}
+
+.btn--grid:hover {
+  background-color: #5a6268;
+}
+
+.btn--list {
+  background-color: #A19D9D;
+  border: none;
 }
 
 .article--cards--list > .card {
   margin-top: 2%;
+  height: 96%;
 }
 .article--cards--list > .card > .card-body > .card--img > .card-img-list {
   height: 470px;
 }
 
 .articles--headlines {
-  background-color: grey;
-  height: 100vh;
+  /* background-color: #8E8E8E; */
+  /* background-color: #A19D9D; */
+  border: 2px solid black;
+  opacity: 0.6;
+  background-size: 20%;
+  border-radius: 5px;
+  height: 130vh;
   overflow: scroll;
+  margin-top: 10%;
+  margin-left: 6%;
+}
+
+.articles--headlines:hover {
+  opacity: 1;
 }
 
 .card--articles--headlines {
   margin-left: 10%;
-}
+  height: 57%;
+  margin-bottom: -33%;
 
+}
 
 .card {
   width: 105%;
+  height: 85%;
   margin-top: 20%;
   /* margin-left: 10%; */
   border-radius: 10px;
   box-shadow: 1px 1px 2px grey;
 }
 
+.card--date {
+  margin-left: -13px;
+}
+
+.card--date, .card--author {
+  opacity: 0.7;
+  font-size: 0.7em;
+  margin-top: 4px;
+}
+
 .card-img-list {
-  height: 250px;
+  height: 172px;
   width: 100%;
 }
