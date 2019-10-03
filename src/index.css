@@ -44,7 +44,8 @@ code {
 }
 
 .label--select {
-  background-color:#A19D9D;
+  /* background-color:#A19D9D; */
+  background-color:black;
   color: white;
   padding: 6px 5px;
   border-radius: 7px;
@@ -60,7 +61,8 @@ code {
 }
 
 .btn--grid {
-  background-color: #8E8E8E;
+  /* background-color: #8E8E8E; */
+  background-color: black;
   border: none;
 }
 
@@ -77,6 +79,7 @@ code {
   margin-top: 2%;
   height: 96%;
 }
+
 .article--cards--list > .card > .card-body > .card--img > .card-img-list {
   height: 574px;
 }
@@ -100,9 +103,13 @@ code {
 
 .card--articles--headlines {
   margin-left: 10%;
-  height: 69%;
+  height: 45%;
   margin-bottom: -33%;
 
+}
+
+.article--cards--grid > .card {
+  height: 90%;
 }
 
 .card {
@@ -112,6 +119,15 @@ code {
   /* margin-left: 10%; */
   border-radius: 10px;
   box-shadow: 1px 1px 2px grey;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card--link--source, .card--link--source:hover {
+  color:black;
+  text-decoration: none;
 }
 
 .card--date {
@@ -125,6 +141,6 @@ code {
 }
 
 .card-img-list {
-  height: 172px;
+  /* height: 172px; */
   width: 100%;
 }
