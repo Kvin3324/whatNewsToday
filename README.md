@@ -9,8 +9,8 @@ Today, daily News are important, so if you have the time to read all, i made thi
 
 ### Tech/framework used:
 **Build with:** <br>
-    - React
-    - HTML
+    - React <br>
+    - HTML <br>
     - CSS
 
 ### Features:
