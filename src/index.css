@@ -87,7 +87,7 @@ code {
 .articles--headlines {
   /* background-color: #8E8E8E; */
   /* background-color: #A19D9D; */
-  border: 2px solid black;
+  border: 1px solid black;
   opacity: 0.6;
   background-size: 20%;
   border-radius: 5px;
@@ -109,7 +109,7 @@ code {
 }
 
 .article--cards--grid > .card {
-  height: 90%;
+  height: 88%;
 }
 
 .card {
