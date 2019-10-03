@@ -9,12 +9,12 @@ Today, daily News are important, so if you have the time to read all, i made thi
 
 ### Tech/framework used:
 **Build with:** <br>
-    * React
-    * HTML
-    * CSS
+    - React
+    - HTML
+    - CSS
 
 ### Features:
-    * Fetch data from an API.
-    * 2 selects created to change the `country` and `category`.
-    * Principal feed in `grid` or `list`view.
-    * Headlines articles in a right section.
+    - Fetch data from an API.
+    - 2 selects created to change the `country` and `category`.
+    - Principal feed in `grid` or `list`view.
+    - Headlines articles in a right section.
