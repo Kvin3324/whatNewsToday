@@ -6,11 +6,10 @@ function Articles() {
     articles: null
   });
   const url = 'https://newsapi.org/v2/'
-  const apiKey = '2a21202597094d93af09a6cb7822189f';
 
   useEffect(() => {
     // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
-    fetch(`${url}everything?domains=lemonde.fr&apiKey=${apiKey}`)
+    fetch(`${url}everything?domains=lemonde.fr&apiKey=${process.env.REACT_APP_API_KEY_ARTICLES}`)
     .then(response => response.json())
     .then(data => setData({articles: data.articles}))
   }, []);
