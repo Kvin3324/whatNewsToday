@@ -8,7 +8,7 @@ The principal page is compose with an actualities feed (in grid or list view, it
 Today, daily News are important, so if you have the time to read all, i made this app to take few minutes to know the situation in others countries.
 
 ### Tech/framework used:
-**Build with:**
+**Build with:** <br>
     * React
     * HTML
     * CSS
