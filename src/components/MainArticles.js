@@ -13,7 +13,7 @@ function Articles() {
     category: [...countryData.category],
     isInGrid: true
   });
-  const url = 'https://newsapi.org/v2/'
+  const url = 'https://newsapi.org/v2/';
 
   const handleChange = element => {
     const newState = {...state};
@@ -34,8 +34,6 @@ function Articles() {
   }
 
   useEffect(() => {
-    // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
-    // fetch(`${url}everything?domains=lemonde.fr&apiKey=${apiKey}`)
     fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&pageSize=50&apiKey=${process.env.REACT_APP_API_KEY_ARTICLES}`)
     .then(response => response.json())
     .then(dataParsed => {
@@ -54,7 +52,7 @@ function Articles() {
               return (
                 <>
                   <label htmlFor={key} className="label--select ml-2 mt-1">{key}</label>
-                  <select className="custom-select select" id={key} onChange={e => handleChange(e)}>
+                  <select className="custom-select select" key={key} id={key} onChange={e => handleChange(e)}>
                     {
                       state[key].map(item => {
                         return typeof item === "object" ?
