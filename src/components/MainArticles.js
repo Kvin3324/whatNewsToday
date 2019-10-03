@@ -18,22 +18,8 @@ function Articles() {
 
   const handleChange = element => {
     const newState = {...state};
-
-    // Object.keys(state.filters).map(lg => {
-    //   console.log(element.target.id);
-    //   if (element.target.value !== lg) {
-    //     newState.filters[lg] = element.target.value;
-    //   }
-    // });
     newState.filters[element.target.id] = element.target.value
     setState(newState);
-
-    // fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&apiKey=${apiKey}`)
-    // .then(data => data.json())
-    // .then(dataParsed => {
-    //   newState.articles = [...dataParsed.articles];
-    //   setState(newState);
-    // });
   };
 
   const handleClick = el => {
@@ -51,7 +37,7 @@ function Articles() {
   useEffect(() => {
     // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
     // fetch(`${url}everything?domains=lemonde.fr&apiKey=${apiKey}`)
-    fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&apiKey=${apiKey}`)
+    fetch(`${url}top-headlines?country=${state.filters.country}&category=${state.filters.category}&pageSize=50&apiKey=${apiKey}`)
     .then(response => response.json())
     .then(dataParsed => {
         const newState = {...state};
