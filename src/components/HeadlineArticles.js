@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ArticleCard from "./ArticleCard"
 
-function Articles() {
+function HeadlinesArticles() {
   const [data, setData] = useState({
     articles: null
   });
   const url = 'https://newsapi.org/v2/'
 
   useEffect(() => {
-    // fetch(`${url}top-headlines?country=fr&apiKey=${apiKey}`)
     fetch(`${url}everything?domains=lemonde.fr&apiKey=${process.env.REACT_APP_API_KEY_ARTICLES}`)
     .then(response => response.json())
     .then(data => setData({articles: data.articles}))
@@ -34,4 +33,4 @@ function Articles() {
   );
 }
 
-export default Articles
+export default HeadlinesArticles
