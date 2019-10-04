@@ -48,11 +48,11 @@ function Articles() {
       <div className="row">
         <div className="countries col-6 mt-5">
           {
-            Object.keys(state.filters).map(key => {
+            Object.keys(state.filters).map((key, i) => {
               return (
                 <>
                   <label htmlFor={key} className="label--select ml-2 mt-1">{key}</label>
-                  <select className="custom-select select" key={key} id={key} onChange={e => handleChange(e)}>
+                  <select className="custom-select select" id={key} onChange={e => handleChange(e)}>
                     {
                       state[key].map(item => {
                         return typeof item === "object" ?
