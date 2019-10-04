@@ -13,7 +13,7 @@ function ArticleCard(props) {
                 : <img src={`${props.urlToImage}`} className="card-img-list" alt="..."/>
             }
           </div>
-          <div className="row mb-2">
+          <div className="row mt-2 mb-2 card--date--author">
             <div className="card--date col-6">
               <Moment format="DD/MM/YYYY">
                 {`${props.publishedAt}`}
@@ -23,18 +23,21 @@ function ArticleCard(props) {
               <p className="card--author--name">{props.author}</p>
             </div>
           </div>
+          <div className="card--about">
+
             <h5 className="card-title">{props.title}</h5>
             <div className="card-description">
               {
                 props.description && props.description.length > 40 ?
-                  <p>{props.description.substr(0, 100)}... <a href={`${props.url}`} target="blank"> Read more</a></p> :
-                  <p>{props.description}</p>
+                <p>{props.description.substr(0, 100)}... <a href={`${props.url}`} target="blank"> Read more</a></p> :
+                <p>{props.description}</p>
               }
             </div>
           <div className="card--source">
             <strong>
               <p>{props.source}</p>
             </strong>
+              </div>
           </div>
         </div>
       </a>
