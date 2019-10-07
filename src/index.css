@@ -128,9 +128,10 @@ code {
 
 .article--cards--list .card .card-body .card--img .card-img-list {
   /* height: 574px; */
-  height: 156px;
-  width: 12vw;
-  margin-right: -40px;
+  height: 150px;
+  width: 11vw;
+  margin-right: -22px;
+  border-radius: 5px;
 }
 
 .article--cards--list .card .card-body .card--about {
