@@ -24,7 +24,6 @@ function ArticleCard(props) {
             </div>
           </div>
           <div className="card--about">
-
             <h5 className="card-title">{props.title}</h5>
             <div className="card-description">
               {
