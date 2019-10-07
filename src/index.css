@@ -52,6 +52,10 @@ code {
 }
 
 /* ------ SELECT FILTERS ------ */
+.filters {
+  display: flex;
+}
+
 .label--select {
   /* background-color:#A19D9D; */
   background-color: #53AF67;
@@ -178,7 +182,7 @@ code {
   /* margin-left: 10%;
   height: 45%; */
   margin-bottom: -28%;
-  height: 50%;
+  height: 60%;
 }
 
 /* ------ CARDs ARTICLES ------ */
@@ -231,4 +235,44 @@ code {
   width: 116%;
   height: 200px;
   margin-top: -20px;
+}
+
+/* ------- MEDIAS QUERIES ------ */
+
+@media screen and(min-width: 576px) and (max-width: 980px) {
+  .buttons--render {
+    margin-left: 34%;
+  }
+
+  .articles--headlines .card .card-body .card--img .card-img-list {
+    width: 139%;
+    height: 156px;
+  }
+
+  .card--articles--headlines {
+    height: 78%;
+  }
+}
+
+@media (max-width: 576px) {
+  .filters {
+    display: block;
+    width: 100%;
+  }
+
+  .articles--headlines {
+    display: none;
+  }
+
+  .article--cards--grid > .card {
+    width: 100%;
+  }
+
+  .article--cards--grid .card .card-body .card--img .card-img-list {
+    width: 115%;
+  }
+
+  .buttons--render {
+    display: none;
+  }
 }
