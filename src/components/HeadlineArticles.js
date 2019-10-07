@@ -15,6 +15,7 @@ function HeadlinesArticles() {
 
   return (
     <React.Fragment>
+    <h3 className="card--articles--headlines--title">By Le Monde:</h3>
       { (function() {
         if(data.articles === null) {
           return <i className="fa fa-spinner"></i>
