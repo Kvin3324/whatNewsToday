@@ -10,7 +10,7 @@ function App() {
       <div className="container--app">
         <Header />
         <div className="row">
-          <div className="col-8 articles--everything">
+          <div className="col-lg-8 col-md-8 col-xs-3 articles--everything">
             <MainArticles />
           </div>
           <div className="col-3 articles--headlines">
