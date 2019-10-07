@@ -42,7 +42,7 @@ code {
 }
 
 .header h1 {
-  font-size: 3.5em;
+  font-size: 2.7em;
   margin-top: 20px;
 }
 
@@ -54,7 +54,6 @@ code {
 /* ------ SELECT FILTERS ------ */
 .label--select {
   /* background-color:#A19D9D; */
-  /* background-color:black; */
   background-color: #53AF67;
   color: black;
   padding: 3px 4px;
@@ -127,7 +126,7 @@ code {
   /* height: 574px; */
   height: 156px;
   width: 12vw;
-  margin-right: -21px;
+  margin-right: -40px;
 }
 
 .article--cards--list .card .card-body .card--about {
@@ -150,25 +149,36 @@ code {
 .articles--headlines {
   /* background-color: #8E8E8E; */
   /* background-color: #A19D9D; */
-  border: 1px solid black;
-  opacity: 0.6;
+  /* border-left: 1px solid black; */
+  /* opacity: 0.6; */
+  border-left: 1px solid #D9D9D9;
   background-size: 20%;
-  border-radius: 5px;
-  height: 130vh;
+  /* border-radius: 5px; */
+  height: 115vh;
   overflow: scroll;
   margin-top: 10%;
   margin-left: 6%;
 }
+.card--articles--headlines--title {
+  text-align: left;
+  font-family: Olondon;
+}
 
-.articles--headlines:hover {
-  opacity: 1;
+.articles--headlines > .card {
+  margin-bottom: 10px;
+}
+
+.articles--headlines .card .card-body .card--img .card-img-list {
+  width: 119%;
+  height: 156px;
+  border-radius: 3px;
 }
 
 .card--articles--headlines {
-  margin-left: 10%;
-  height: 45%;
-  margin-bottom: -33%;
-
+  /* margin-left: 10%;
+  height: 45%; */
+  margin-bottom: -28%;
+  height: 50%;
 }
 
 /* ------ CARDs ARTICLES ------ */
