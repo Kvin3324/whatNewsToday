@@ -22,7 +22,7 @@ function HeadlinesArticles() {
         } else{
           return data.articles.map((article, index) => {
             return (
-              <div className="col-10 card--articles--headlines" key={index}>
+              <div className="col-10 col-xs-10 card--articles--headlines" key={index}>
                 <ArticleCard urlToImage={article.urlToImage} publishedAt={article.publishedAt} author={article.author} title={article.title} source={article.source.name} url={article.url} key={index} />
               </div>
             )
