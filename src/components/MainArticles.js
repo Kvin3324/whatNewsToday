@@ -46,7 +46,7 @@ function Articles() {
   return (
     <React.Fragment>
       <div className="row">
-        <div className="countries col-6 mt-5">
+        <div className="filters col-lg-6 col-md-6 mt-5">
           {
             Object.keys(state.filters).map((key, i) => {
               return (
@@ -79,7 +79,7 @@ function Articles() {
             } else{
               return state.articles.map((article, index) => {
                 return (
-                  <div className={`${state.isInGrid ? "col-4 article--cards--grid" : "col-12 article--cards--list"}`} key={index} >
+                  <div className={`${state.isInGrid ? "col-md-4 col-lg-4 col-xs-12 article--cards--grid" : "col-12 article--cards--list"}`} key={index} >
                     <ArticleCard urlToImage={article.urlToImage} publishedAt={article.publishedAt} author={article.author} title={article.title} description={article.description} source={article.source.name} url={article.url} key={index} />
                   </div>
                 )
