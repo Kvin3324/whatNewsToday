@@ -46,7 +46,7 @@ function Articles() {
   return (
     <React.Fragment>
       <div className="row">
-        <div className="filters col-lg-6 col-md-6 mt-5">
+        <div className="filters col-lg-6 col-md-10 mt-5">
           {
             Object.keys(state.filters).map((key, i) => {
               return (
@@ -66,7 +66,7 @@ function Articles() {
               })
             }
         </div>
-        <div className="buttons--render mt-5">
+        <div className="buttons--render mt-5 col-md-6">
           <button type="button" className="btn btn-primary btn-sm btn--grid" onClick={e => handleClick(e)}><i className="fas fa-grip-horizontal mr-1"></i>Grid</button>
           <button type="button" className="btn btn-secondary btn-sm btn--list" onClick={e => handleClick(e)}><i className="fas fa-bars mr-1"></i>List</button>
         </div>
