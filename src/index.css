@@ -128,7 +128,7 @@ code {
 
 .article--cards--list .card .card-body .card--img .card-img-list {
   /* height: 574px; */
-  height: 150px;
+  height: 163px;
   width: 11vw;
   margin-right: -22px;
   border-radius: 5px;
@@ -232,8 +232,9 @@ code {
 }
 
 .card-img-list {
+  object-fit: cover;
   margin-left: -20px;
-  width: 116%;
+  width: 114%;
   height: 200px;
   margin-top: -20px;
 }
@@ -257,6 +258,7 @@ code {
   }
 
   .articles--headlines .card .card-body .card--img .card-img-list {
+    object-fit: cover;
     width: 139%;
     height: 156px;
   }
@@ -281,6 +283,7 @@ code {
   }
 
   .article--cards--grid .card .card-body .card--img .card-img-list {
+    object-fit: cover;
     width: 115%;
   }
 
@@ -306,6 +309,7 @@ code {
   }
 
   .article--cards--grid .card .card-body .card--img .card-img-list {
+    object-fit: cover;
     width: 125%;
     height: 138px;
   }
@@ -324,6 +328,7 @@ code {
   }
 
   .article--cards--list .card .card-body .card--img .card-img-list {
+    object-fit: cover;
     width: 21vw;
     height: 125px;
   }
